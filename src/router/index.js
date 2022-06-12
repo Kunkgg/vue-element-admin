@@ -108,14 +108,21 @@ export const constantRoutes = [
       {
         path: 'index',
         component: () => import('@/views/code-trust/index'),
-        name: 'CodeTrust',
-        meta: { title: 'CodeTrust' }
+        name: 'CodeTrustIndex',
+        meta: { title: 'CodeTrustIndex' }
       },
       {
         path: 'sensitive',
         component: () => import('@/views/sensitive/index'),
         name: 'Sensitive',
         meta: { title: '敏感信息' }
+      },
+      {
+        hidden: true,
+        path: 'sensitive/detail',
+        component: () => import('@/views/sensitive/detail'),
+        name: 'SensitiveDetail',
+        meta: { title: '敏感信息详情' }
       }
     ]
   },
