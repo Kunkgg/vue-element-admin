@@ -96,6 +96,30 @@ export const constantRoutes = [
     ]
   },
   {
+    path: '/codetrust',
+    component: Layout,
+    redirect: '/codetrust/index',
+    name: 'CodeTrust',
+    meta: {
+      title: '代码可信',
+      icon: 'excel'
+    },
+    children: [
+      {
+        path: 'index',
+        component: () => import('@/views/code-trust/index'),
+        name: 'CodeTrust',
+        meta: { title: 'CodeTrust' }
+      },
+      {
+        path: 'sensitive',
+        component: () => import('@/views/sensitive/index'),
+        name: 'Sensitive',
+        meta: { title: '敏感信息' }
+      }
+    ]
+  },
+  {
     path: '/guide',
     component: Layout,
     redirect: '/guide/index',
